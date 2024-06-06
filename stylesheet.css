@@ -57,7 +57,7 @@ ul {
     padding-top: 10px;
     margin: 0;
     padding-left: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
     align-items: center;
 }
 
@@ -79,20 +79,26 @@ li a {
     font-variant: small-caps;
     text-align: left;
     font-size: 1.5rem;
+    font-weight: 600;
 }
 
-main {
+main, footer {
     background-color: #fff;
 }
 
-#trending h2 {
+#trending h2, #playlists h2, #curated h2 {
     margin: 0px;
     padding: 30px 25px 8px 25px;
     text-transform: uppercase;
 }
 
+#playlists h2, #curated h2 {
+    padding-bottom: 15px;
+}
+
 #trending > div {
     display: flex;
+    /* --------------------scroll bar---------------------- */
     overflow: auto;
 }
 
@@ -114,6 +120,9 @@ p, dl, dd {
 
 footer p {
     font-size: .75em;
+    margin: 0 auto;
+    padding: 25px;
+    text-align: center;
 }
 
 .aloma {
@@ -203,10 +212,66 @@ footer p {
     margin: 0px 10px;
 }
 
-#trending > p {
+#trending > p, #playlists > p, #curated > p {
     text-align: right;
 }
 
+main > div {
+    display:flex;
+    flex: 0 1 auto;
+}
+
+main > div section {
+    max-width: 50%;
+}
+
+#playlists div, #curated div{
+    max-height: 510px;
+    /* --------------------scroll bar---------------------- */
+    overflow: auto;
+}
+
+#playlists div {
+    background-color: #2699FB;
+}
+
+#curated div {
+    background-color: #020873;
+}
+
+.curatedlist {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 30px 1fr;
+    background-color: rgba(2, 0, 52, 0.199);
+    margin: 10px 10px 20px 10px;
+    padding: 10px;
+}
+
+.curatedlist:hover {
+    background-color: #590242;
+}
+
+.curatedlist img {
+    grid-column: 1;
+    grid-row: 1 / 3;
+}
+
+.curatedlist h3 {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.curatedlist p {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 10px;
+    text-align: center;
+    line-height: 1.1;
+}
 
 
 
