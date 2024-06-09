@@ -464,6 +464,7 @@ audio::-webkit-media-controls-enclosure {
         user-select: none;
         position: absolute;
         top: 0px;
+        z-index: 1;
     }
 
     label span {
