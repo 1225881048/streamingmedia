@@ -53,22 +53,44 @@ dd {
 nav {
     background-color: #020873;
     order: 0;
+    display: inline-flex;
 }
 
-ul {
-    display: flex;
+nav h2 a {
+    text-decoration: none;
+}
+
+nav li {
+    margin: 0 0 15px 0;
+}
+
+nav a {
+    margin: 0 0 20px 0;
+}
+
+
+/* hhhhhhhhhhhhhhhhhhhhhhhh */
+nav > h2, nav > ul {
     list-style-type: none;
     background-color: #020873;
-    padding-top: 10px;
     margin: 0;
     padding-left: 10px;
     padding-bottom: 15px;
     align-items: center;
 }
 
-ul:hover {
+ul {
+    display: inline-flex;
+    flex: 1 1 auto;
+}
+
+nav:hover {
     background-color: #590242;
 }
+
+/* input {
+    display: none;
+} */
 
 li {
     flex: 1;
@@ -82,9 +104,12 @@ li a {
 
 .smallcaps {
     font-variant: small-caps;
-    text-align: left;
     font-size: 1.5rem;
     font-weight: 600;
+}
+
+#smallcaps {
+    text-align: left;
 }
 
 main {
@@ -393,6 +418,7 @@ audio::-webkit-media-controls-enclosure {
 
     header {
         grid-template-columns: 100vw;
+        overflow: hidden;
     }
 
     header p {
@@ -406,5 +432,111 @@ audio::-webkit-media-controls-enclosure {
     html, body {
         max-width: 375px;
     }
+
+    nav {
+        display: block;
+    }
+
+    nav ul {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+        max-height: 0;
+        display: block;
+        transition: max-height .2s ease-out;
+    }
+
+    nav h2 {
+        padding: 15px;
+        text-align: center;
+    }
+
+    nav li a {
+        display: block;
+    }
+
+    nav:hover {
+        background-color: #020873;
+    }
+
+    li {
+        margin-top: 10px;
+    }
+
+    /* nav a:hover, nav input:hover {
+        background-color: #590242;
+    } */
+
+    /* nav a:checked, nav input:checked {
+        background-color: #020873;
+    } */
+
+    li:active {
+        background-color: #020873;
+    }
+
+
+
+    /* hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh */
+
+
+
+    label {
+        cursor: pointer;
+        display: inline-block;
+        padding: 28px 20px;
+        position: relative;
+        user-select: none;
+    }
+    label span {
+        background-color: #ffffff;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background-color .2s ease-out;
+        width: 18px;
+    }
+    label span:before, label span:after {
+        background: #ffffff;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+    label span:before {
+        top: 5px;
+    }
+    label span:after {
+        top: -5px;
+    }
+    input {
+        display: none;
+    }
+    input:checked ~ ul {
+        max-height: 500px;
+    }
+    input:checked ~ label span {
+        background: transparent;
+    }
+    input:checked ~ label span:before {
+        transform: rotate(-45deg);
+    }
+    input:checked ~ label span:after {
+        transform: rotate(45deg);
+    }
+    input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+        top: 0;
+    }
     
+    br {
+        content:' ';
+    }
+
+    br:after {
+        content:' ';
+    }
 }
