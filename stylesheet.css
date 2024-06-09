@@ -374,7 +374,7 @@ audio::-webkit-media-controls-enclosure {
     background: #fff;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
 
     #trending > p, #playlists > p, #curated > p {
         text-align: left;
@@ -414,6 +414,7 @@ audio::-webkit-media-controls-enclosure {
 
     html, body {
         max-width: 375px;
+        margin: 0 auto;
     }
 
     nav {
